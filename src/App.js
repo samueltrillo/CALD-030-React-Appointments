@@ -3,6 +3,7 @@ import appointments from '../src/data/appointments.json';
 import Header from './components/Header';
 import Appointments from './components/Appointments';
 import Aside from './components/Aside';
+import AddAppointment from './components/AddAppointment';
 import './css/app.css';
 
 
@@ -23,18 +24,12 @@ export class App extends Component {
             <Header />
             <Appointments appointments={this.state.appointments}
             deleteAppointment={this.deleteAppointment}/>
+            <AddAppointment />
           </div>
         </div>
       </div>
     );
   }
 }
-// function App() {
-//   return (
-//     <div className="App">
-//       <p>hola</p>
-//     </div>
-//   );
-// }
 
 export default App;

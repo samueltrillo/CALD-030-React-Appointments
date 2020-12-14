@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../css/appointments.css';
+import propTypes from 'prop-types';
 
 export class AppointmentList extends Component {
     render() {
@@ -23,7 +25,7 @@ export class AppointmentList extends Component {
                 <td>{monthly_hours}</td>
                 <td>{maintainceType}</td>
                 <td>
-                    <button onClick={() => console.log(this.props.appointment.id)}>Update</button>
+                    <button>Update</button>
                 </td>
                 <td>
                     <button onClick={this.props.deleteAppointment.bind(this, id)}>Delete</button>
@@ -33,5 +35,8 @@ export class AppointmentList extends Component {
     }
 }
 
+AppointmentList.propTypes = {
+    appointments: propTypes.array.isRequired
+}
 
 export default AppointmentList
