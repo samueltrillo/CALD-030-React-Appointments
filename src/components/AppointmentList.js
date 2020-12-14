@@ -36,7 +36,7 @@ export class AppointmentList extends Component {
 }
 
 AppointmentList.propTypes = {
-    appointments: propTypes.array.isRequired
+    appointment: propTypes.array.isRequired
 }
 
 export default AppointmentList
