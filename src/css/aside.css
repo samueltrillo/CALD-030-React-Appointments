@@ -1,0 +1,33 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    flex: 20%;
+    float: left;
+    height: auto;
+}
+.caldar {
+    background-color:#3D4855;
+}
+h3 {
+    margin: 0px;
+    padding: 25px;
+    height: 75px;
+    color: #ffffff;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    background-color:#232F3E;
+    flex-grow: 1;
+    
+}
+ol {
+    list-style-type: none;
+}
+li {
+    margin-bottom: 10px;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
