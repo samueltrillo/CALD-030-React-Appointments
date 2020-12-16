@@ -14,6 +14,29 @@ export class App extends Component {
     this.setState({appointments: [...this.state.appointments.filter(appointments =>
       appointments.id !== id)]});
   }
+
+  addAppointment= ([
+    id,
+    building,
+    boiler,
+    technician,
+    start_timestamp,
+    end_timestamp,
+    monthly_hours,
+    maintainceType
+  ]) => {
+    const newAppointment = {
+      id,
+      building,
+      boiler,
+      technician,
+      start_timestamp,
+      end_timestamp,
+      monthly_hours,
+      maintainceType
+    }
+    this.setState({ appointments: [...this.state.appointments, newAppointment]});
+  }
   
   render() {
     return  (
@@ -24,7 +47,7 @@ export class App extends Component {
             <Header />
             <Appointments appointments={this.state.appointments}
             deleteAppointment={this.deleteAppointment}/>
-            <AddAppointment />
+            <AddAppointment addAppointment={this.addAppointment}/>
           </div>
         </div>
       </div>
