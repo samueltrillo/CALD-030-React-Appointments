@@ -22,7 +22,8 @@ class Appointments extends Component {
                         <tbody>
                             {this.props.appointments.map((appointment) => 
                             <AppointmentList key={appointment.id} appointment={appointment}
-                            deleteAppointment={this.props.deleteAppointment}/>
+                            deleteAppointment={this.props.deleteAppointment}
+                            selectItem={this.props.selectItem}/>
                             )}
                         </tbody>
                     </table>

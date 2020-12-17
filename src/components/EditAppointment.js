@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import '../css/add-form.css'
 
-export class AddAppointment extends Component {
+export class EditAppointment extends Component {
     state = {
         id: '',
         building: '',
@@ -13,40 +12,40 @@ export class AddAppointment extends Component {
         maintainceType:''
     }
 
-    onSubmit = (e) => {
-        e.preventDefault();
-        this.props.addAppointment([
-            this.state.id,
-            this.state.building,
-            this.state.boiler,
-            this.state.technician,
-            this.state.start_timestamp,
-            this.state.end_timestamp,
-            this.state.monthly_hours,
-            this.state.maintainceType
-        ]);
-        this.setState({
-            id: '',
-            building: '',
-            boiler: '',
-            technician:'',
-            start_timestamp:'',
-            end_timestamp:'',
-            monthly_hours:'',
-            maintainceType:''
-        });
+    componentDidUpdate (prevProps) { 
+        if (this.props.appointment !== prevProps.appointment) {
+            this.setState({
+                id: this.props.appointment.id,
+                building: this.props.appointment.building,
+                boiler: this.props.appointment.boiler,
+                technician: this.props.appointment.technician,
+                start_timestamp: this.props.appointment.start_timestamp,
+                end_timestamp: this.props.appointment.end_timestamp,
+                monthly_hours: this.props.appointment.monthly_hours,
+                maintainceType: this.props.appointment.maintainceType
+            })
+        } 
     }
 
-    onChange = (e) => this.setState({
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.props.updateItem(
+            this.state
+        )
+    }
+
+    onChange = (e) => this.setState({ 
         [e.target.name]: e.target.value
     });
+    
 
     render() {
         return (
             <div>
+                <div>
                 <div className='add-box'>
                     <h2>
-                        Add appointment
+                        Edit appointment
                     </h2>
                     <form onSubmit={this.onSubmit}>
                         <div className='form-box1'>
@@ -91,8 +90,10 @@ export class AddAppointment extends Component {
                     </form>
                 </div>
             </div>
+                
+            </div>
         )
     }
 }
 
-export default AddAppointment
+export default EditAppointment

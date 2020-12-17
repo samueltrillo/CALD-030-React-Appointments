@@ -25,10 +25,10 @@ export class AppointmentList extends Component {
                 <td>{monthly_hours}</td>
                 <td>{maintainceType}</td>
                 <td>
-                    <button>Update</button>
+                    <button onClick={() => this.props.selectItem(id)}>Update</button>
                 </td>
                 <td>
-                    <button onClick={this.props.deleteAppointment.bind(this, id)}>Delete</button>
+                    <button onClick={() => this.props.deleteAppointment(id)}>Delete</button>
                 </td>
             </tr>
         )
