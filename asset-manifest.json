@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/CALD-030-React-Appointments/static/css/main.09770c61.chunk.css",
+    "main.js": "/CALD-030-React-Appointments/static/js/main.c8bd0fe5.chunk.js",
+    "main.js.map": "/CALD-030-React-Appointments/static/js/main.c8bd0fe5.chunk.js.map",
+    "runtime-main.js": "/CALD-030-React-Appointments/static/js/runtime-main.3d9dfa8c.js",
+    "runtime-main.js.map": "/CALD-030-React-Appointments/static/js/runtime-main.3d9dfa8c.js.map",
+    "static/js/2.834298bb.chunk.js": "/CALD-030-React-Appointments/static/js/2.834298bb.chunk.js",
+    "static/js/2.834298bb.chunk.js.map": "/CALD-030-React-Appointments/static/js/2.834298bb.chunk.js.map",
+    "static/js/3.0b8e0aa6.chunk.js": "/CALD-030-React-Appointments/static/js/3.0b8e0aa6.chunk.js",
+    "static/js/3.0b8e0aa6.chunk.js.map": "/CALD-030-React-Appointments/static/js/3.0b8e0aa6.chunk.js.map",
+    "index.html": "/CALD-030-React-Appointments/index.html",
+    "static/css/main.09770c61.chunk.css.map": "/CALD-030-React-Appointments/static/css/main.09770c61.chunk.css.map",
+    "static/js/2.834298bb.chunk.js.LICENSE.txt": "/CALD-030-React-Appointments/static/js/2.834298bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d9dfa8c.js",
+    "static/js/2.834298bb.chunk.js",
+    "static/css/main.09770c61.chunk.css",
+    "static/js/main.c8bd0fe5.chunk.js"
+  ]
+}
