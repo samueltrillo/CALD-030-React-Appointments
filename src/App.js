@@ -3,10 +3,8 @@ import appointmentData from '../src/data/appointments.json';
 import Header from './components/Header';
 import Appointments from './components/Appointments';
 import Aside from './components/Aside';
-import AddAppointment from './components/AddAppointment';
-import EditAppointment from './components/EditAppointment'
+import AddEditAppointment from './components/AddEditAppointment'
 import './css/app.css';
-
 
 export class App extends Component {
   state={
@@ -30,7 +28,7 @@ export class App extends Component {
     maintainceType
   ]) => {
     const newAppointment = {
-      id,
+      id: Math.floor(Math.random() * 1000),
       building,
       boiler,
       technician,
@@ -44,6 +42,7 @@ export class App extends Component {
 
   selectItem = (id) => {
     const appointmentsEdit = this.state.appointments.find(appointment => appointment.id === id)
+    console.log(appointmentsEdit)
     this.setState({ appointment: appointmentsEdit });
   }
 
@@ -53,7 +52,7 @@ export class App extends Component {
     ).indexOf(appointmentUpdate.id)
     const appointmentsUpdate = this.state.appointments;
     appointmentsUpdate[appointmentPosition]=appointmentUpdate;
-    this.setState({appointments: appointmentsUpdate})
+    this.setState({appointments: appointmentsUpdate, appointment: {}});
   }
   
   render() {
@@ -66,10 +65,10 @@ export class App extends Component {
             <Appointments appointments={this.state.appointments}
             deleteAppointment={this.deleteAppointment}
             selectItem={this.selectItem}/>
-            <AddAppointment addAppointment={this.addAppointment}
-            appointments={this.state.appointments}/>
-            <EditAppointment appointment={this.state.appointment}
-            updateItem={this.updateItem}/>
+            <AddEditAppointment appointment={this.state.appointment}
+            updateItem={this.updateItem}
+            appointments={this.state.appointments}
+            addAppointment={this.addAppointment}/>
           </div>
         </div>
       </div>
